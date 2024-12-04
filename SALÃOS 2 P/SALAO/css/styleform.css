@@ -1,0 +1,93 @@
+
+@font-face {
+    font-family: "sansation";
+    src: url(sansation/Sansation_Bold.ttf)  format('truetype');
+    /* or opentype */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-image: url('/img/Screenshot\ 2024-11-11\ 105136.png');
+    background-color:orange;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 30%;
+}
+.for{
+    padding: 10px;
+    color:black;
+    margin: 10px;
+}
+
+label{
+    color:white;
+}
+img{
+    width: 150px;
+    text-align: center;
+}
+
+input{
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;                /*espaço entre as caixas de texto*/
+    border-radius: 4px;
+}
+
+.button{
+    background-color: #fe9611;
+    width: 30%;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 17px;
+    padding: 9px;
+    text-align: center;
+    display: inline-block;
+    color: azure;
+    margin: 16px 8px;
+}
+
+button:hover{
+    background-color:rgb(194, 194, 229);
+}
+.resultado{
+    margin-top: 20px;
+}
+.resultado p{
+    margin: 5px 0;
+}
+
+#rua{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between; /*faz ficas separados entre eles*/
+}
+#logradouro, #n{
+    width: 100%; 
+}
+.logradouro, .numero{
+    display: flex;
+    flex-direction: column;
+}
+
+.logradouro {
+    width: 70%;
+}
+
+.numero {
+    width: 25%;
+}
+
+#volte{
+    color: azure;
+    font-size: larger;
+}

@@ -1,0 +1,110 @@
+@font-face {
+    font-family: "sansation";
+    src: url(sansation/Sansation_Bold.ttf)  format('truetype');
+    /* or opentype */
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;  
+}
+h1{
+    color:white;
+    text-align: center;
+}
+nav a{
+    text-decoration: none;
+    color:white;
+    display: block;
+    padding: 15px 10px 15px;
+    
+}
+nav a:hover{
+    color:white;
+    background-color: rgb(255, 178, 34);
+}
+ul{
+    list-style-type: none;
+}
+
+main {
+    padding: 20px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 6fr));
+    gap: 10px;
+}
+
+.cursos {
+    background: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.cursos img {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #2b3fc0;
+    margin: 10px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background:#f5741d;
+    color: #fff;
+}
+header{
+    background-color:rgb(21, 4, 98); /*pode colocar um padding*/
+  
+}
+
+nav a{
+    text-decoration: none;
+    color:white;
+    display: block;
+    padding: 15px 10px 15px;
+    
+}
+nav a:hover{
+    color:white;
+    background-color: rgb(255, 178, 34);
+}
+ul{
+    list-style-type: none;
+}
+
+nav{
+    background-color: rgba(118, 107, 107, 0.5);
+    width: 0px;
+    height: 90%;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index:1; /*sobrepõe os outro elementos*/
+    overflow: hidden;
+    transition: width 0.3s;
+    cursor: pointer;
+}
+.btn-abrir{
+    color: #F5F5F5;
+    font-size: 50px;
+    text-decoration: none;
+}
+
+
+#logosenac{
+    width: 100px;
+    padding-top: 20px;
+    float: right; /*deica a imagem/logo no canto da tela*/
+}
+

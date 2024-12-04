@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO</title>
+    <link rel="stylesheet" href="css/styleform.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="sus" onclick="resposta()"></a>
+        <nav class="for">
+            <h1>PREENCHA O FORMULÁRIO</h1>
+        </nav>
+    </header>
+
+    <form>
+        <div>
+            <label>CEP:</label>
+            <input type="text" id="cep" placeholder="Apenas números" maxlength="8">
+        </div>
+        <div>
+            <!----- legenda para nome--->
+            <label>Nome:</label>
+            <!----CAMPO INPUT TYPE TEXTO --->
+            <input id="nome" type="text" placeholder="Digite aqui seu nome">
+
+        </div>
+        <!--- CAMPO EMAIL-->
+        <div>
+            <label>E-mail:</label>
+            <input id="email" type="text" placeholder="Digite seu e-mail" required>
+
+        </div>
+        <div id="rua">
+            <div class="logradouro">
+                <label>Logradoudo:</label>
+                <input id="logradouro" type="text" placeholder="Logradoudo">
+            </div>
+
+            <div class="numero">
+                <label>Nº</label>
+                <input id="n" type="number">
+            </div>
+
+        </div>
+
+        <label>Localidade:</label>
+        <input id="localidade" type="text" placeholder="Localidade">
+        </div>
+
+        <div>
+            <label>Uf:</label>
+            <input id="uf" type="text" placeholder="Uf">
+        </div>
+
+        <div>
+            <label> Estado:</label>
+            <input id="estado" type="text" placeholder="Estado">
+        </div>
+
+        <div>
+            <label>DDD:</label>
+            <input id="ddd" type="text" placeholder="(81)xxxxxxxx">
+        </div>
+
+        <div class="button">
+            <a type="button" onclick="buscarCEP()">Buscar Cep</a>
+        </div>
+
+        <div class="button">
+            <a type="butt" onclick="limparcampo()">Limpar</a>
+
+        </div>
+
+        <div class="button">
+            <a type="cad" onclick="cadastro()">Cadastrar</a>
+        </div>
+
+        <div>
+            <a id="volte" href="login.html">Voltar para Login</a>
+        </div>
+        </div>
+
+
+    </form>
+
+    <script src="js/scriptfor.js"></script>
+
+</body>
+
+</html>
+
+
+<!--- campo input do type submit( metodo required = obrigatório)-->
+<!-- <button id="enviar" onclick="enviarCad()">Enviar Cadastro </button> -->
+<!-- required= preenchimento obrigatório -->

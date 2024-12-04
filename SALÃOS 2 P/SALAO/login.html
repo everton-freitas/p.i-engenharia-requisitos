@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login2.css">
+    <title>Página de Login</title>
+</head>
+<body>
+        <header>
+            <a href="#" class="btn-abrir" onclick="abrirMenu()" >&#9776;</a>
+            <img  id="logosenac"  src="img/logo.png" alt="">
+        </header>
+     
+    <nav id="menu"> 
+       <br>
+       <br>
+            <a href="index.html">INÍCIO</a>
+            <a href="sobrenos.html">SOBRE NÓS</a> 
+            <a href="cursossss.html">CURSOS</a>
+            <a href="servicos.html">SERVIÇOS</a>
+            <a href="apiformulario.html">CADASTRO</a>
+            <a href="agendamento.html">AGENDE SEU SERVIÇO</a>
+            <a href="login.html">LOGIN</a></li> 
+            <a href="#" onclick="fecharMenu()">&times;FECHAR</a>
+            
+    </nav>  
+    
+    <!-- Área de Login -->
+    <section class="login-background">
+        <div class="login-frame">
+            <div class="login-box">
+                <h2>Login</h2>
+                <form id="login-form">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" required>
+
+                    <button type="submit" class="btn-gradiente">Entrar</button>
+                </form>
+                <div class="links">
+                    <a href="senha.html">Esqueci minha senha</a>
+                    <br>
+                    <a href="apiformulario.html">Cadastrar-se</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+    <script src="js/teste.js"></script>
+    <script src="js/telainiciar.js"></script>
+</body>
+</html>

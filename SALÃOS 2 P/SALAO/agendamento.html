@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/agendaStyle.css">
+
+    <title>Página Inicial</title>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="btn-abrir" onclick="abrirMenu()">INICIO</a>
+    </header>
+
+    <a href="#" class="agendar" onclick="agendar()"></a>
+
+
+    <form action="formulario de agandamento">
+        <!-- Background com imagem e overlay -->
+        <section class="agendamento-background">
+            <div class="overlay"></div>
+            <div class="agendamento-frame">
+                <div class="agendamento-box">
+                    <h2>Agende seu Serviço</h2>
+                    <form id="agendamento-form">
+                        <div class="label-input">
+                            <label for="nome">Nome Completo:</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+
+                        <div class="label-input">
+                            <label for="cpf">CPF:</label>
+                            <input type="text" id="cpf" name="cpf" oninput="validarCPF(this)" maxlength="11" required>
+
+                        </div>
+                        <div class="label-input">
+                            <label for="telefone">Telefone:</label>
+                            <input type="text" id="telefone" name="telefone" oninput="validarFONE(this)" maxlength="11"
+                                required>
+
+                        </div>
+
+                        <div class="label-input">
+                            <label for="servico">Serviços:</label>
+
+                            <select id="servico" name="servico" required>
+                                <option value="" disabled selected>Selecione um serviço</option>
+                                <option value="cabeleleira">Cabeleleira</option>
+                                <option value="manicure">Podologia</option>
+                                <option value="sobrancelha">Sobrancelha e Maquiagem</option>
+                                <option value="massagem">Massagem</option>
+                                <option value="esteticista">Esteticista</option>
+                                <option value="gel">Unha em Gel</option>
+                                <option value="epilacaof">Epilação Feminina</option>
+                                <option value="epilacaom">Epilação Masculina</option>
+                            </select>
+                        </div>
+
+                        <div class="label-input">
+                            <label for="sub">Subcategoria</label>
+                            <select id="subcategoria-selecao" name="subcategoria" required>
+                                <option value="0" disabled selected>Selecione uma Subcategoria</option>
+
+                                <!-- Subcategorias para Cabeleleira -->
+                                <option value="realinhamento">Realinhamento Térmico (Tiol de amônio) + Tratamento
+                                    c/finalização | R$ 150</option>
+                                <option value="colocacao">Aplicação de Coloração até 2 cm (cliente traz a tinta) | R$ 50
+                                </option>
+                                <option value="reflexos">Reflexos ou Luzes/ Touca + tonalização | R$ 270 (curto) / R$
+                                    350
+                                    (médio) / R$ 400 (longo) / R$ 450 (extralongo)</option>
+
+                                <!-- Subcategorias para Manicure e Pedicure -->
+                                <option value="smaltacao">Esmaltação (Cortar + Lixar + Esmaltar) | R$ 15</option>
+                                <option value="manicure">Manicure | R$ 28</option>
+                                <option value="pedicureManicure">Pedicure + Manicure | R$ 55</option>
+                                <option value="pedicure">Pedicure | R$ 28</option>
+
+                                <!-- Subcategorias para Designer Facial -->
+                                <option value="designSobrancelhas">Design de Sobrancelhas | R$ 48</option>
+                                <option value="henna">Design de Sobrancelhas + Henna | R$ 60</option>
+                                <option value="limpezaSobrancelhas">Limpeza de Sobrancelhas | R$ 40</option>
+                                <option value="maquiagem">Maquiagem | R$ 100</option>
+
+                                <!-- Subcategorias para Estética -->
+                                <option value="drenagemManual">Drenagem Linfática Corporal Manual (por área) | R$ 70
+                                </option>
+                                <option value="drenagemPosCirurgica">Drenagem Linfática Corporal Pós-Cirúrgica (por
+                                    área) |
+                                    R$ 70</option>
+                                <option value="drenagemFacial">Drenagem Linfática Facial | R$ 40</option>
+                                <option value="limpezaPele">Limpeza de Pele | R$ 100</option>
+
+                                <!-- Subcategorias para Unhas em Gel -->
+                                <option value="alongamentoGel">Alongamento de Unhas em Gel (Encapsulada) | R$ 140
+                                </option>
+                                <option value="banhoGel">Banho de Gel | R$ 100</option>
+                                <option value="manutencaoGel">Manutenção de Unhas em Gel | R$ 95</option>
+                                <option value="remocaoGel">Remoção do Esmalte em Gel | R$ 20</option>
+
+                                <!-- Subcategorias para Epilação Feminina -->
+                                <option value="pernasFemininas">1/2 Pernas | R$ 30</option>
+                                <option value="axilasFemininas">Axilas | R$ 24</option>
+                                <option value="esfoliacaoPernasFemininas">Esfoliação Pernas Completa | R$ 15</option>
+                                <option value="virilhaCavadaFeminina">Virilha Cavada | R$ 38</option>
+
+                                <!-- Subcategorias para Epilação Masculina -->
+                                <option value="bracosMasculinos">Masc. Braços Completos | R$ 35</option>
+                                <option value="costasMasculinas">Masc. Costas Completas | R$ 55</option>
+                                <option value="toraxMasculino">Masc. Tórax | R$ 40</option>
+                                <option value="pernasMasculinas">Masc. Pernas Completas | R$ 65</option>
+                            </select>
+                        </div>
+
+                        <div id="preco" class="label-input">
+                            <label for="preco">Preço:</label>
+                            <input type="text" id="preco-valor" name="preco" readonly>
+                        </div>
+
+
+                        <div class="label-input">
+                            <label for="data">Data:</label>
+                            <input type="date" id="data" name="data" required>
+                        </div>
+
+                        <div class="label-input">
+                            <label for="horario">Horário:</label>
+                            <select id="horario" name="horario" required></select>
+                        </div>
+
+                        <div id="agendamento-form" class="label-input">
+                            <button type="submit" class="btn-gradiente">Agendar</button>
+                        </div>
+                </div>
+            </div>
+        </section>
+    </form>
+
+    <footer>
+
+        <div class="func">
+            <h3>Horário de Funcionamento</h3>
+
+            <p>Segunda a sexta-feira, das 8h às 18h, sábados, das 9h às 15h.
+                Atendimento com horário marcado.
+                Contatos
+                (81) 3413.6688 / 6647
+            </p>
+        </div>
+
+    </footer>
+    <script></script>
+    <script src="js/agenda.js"></script>
+    <script src="js/telainiciar.js"></script>
+
+</body>
+
+</html>
